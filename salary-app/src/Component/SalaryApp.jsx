@@ -218,6 +218,7 @@ import * as XLSX from 'xlsx';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import './SalaryApp.css';
+import Footer from './Footer';
 
 const SalaryApp = () => {
   const [employees, setEmployees] = useState([]);
@@ -366,6 +367,7 @@ const SalaryApp = () => {
   };
   
   return (
+    <div className='m-container'>
     <div className="container">
       <div className="sidebar">
         <h2>Upload Employee Excel</h2>
@@ -397,7 +399,7 @@ const SalaryApp = () => {
       <div className="content">
         {selectedEmployee && (
           <div className="employee-details">
-            <h2>Salary Details for {capitalizeName(selectedEmployee.Name)}</h2>
+            <h2>Salary Details for <b>{capitalizeName(selectedEmployee.Name)}</b></h2>
             <div className="table-scroll">
               <table className="salary-table">
                 <thead>
@@ -437,6 +439,8 @@ const SalaryApp = () => {
         )}
       </div>
     </div>
+      <Footer/>
+      </div>
   );
 };
 

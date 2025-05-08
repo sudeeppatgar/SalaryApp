@@ -1,4 +1,9 @@
 /* Global container */
+.m-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .container {
   display: flex;
   height: 100vh;
@@ -65,13 +70,19 @@ input[type='file'] {
 /* Right content area */
 .content{
   width: 70%;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;  
 }
 
 .employee-details h2 {
-  font-size: 24px;
-  color: #333;
+  font-size: 20px;
+  color:gray;
 }
-
+.employee-details b {
+  font-size: 24px;
+  color:#333;
+}
 .employee-details p {
   margin: 8px 0;
   font-size: 16px;
@@ -92,6 +103,7 @@ input[type='file'] {
 .download-btn:hover {
   background-color: #145c39;
 }
+
 .salary-table {
   width: 100%;
   border-collapse: collapse;
